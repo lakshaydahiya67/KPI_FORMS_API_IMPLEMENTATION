@@ -44,7 +44,7 @@ docker-compose up -d
 ### 4. Configure Environment
 Update `.env` file with your database credentials:
 ```env
-DATABASE_URL=postgresql://username:password@localhost:5432/kpa_forms
+DATABASE_URL=postgresql://username:password@localhost:5434/kpa_forms
 POSTGRES_USER=username
 POSTGRES_PASSWORD=password
 POSTGRES_DB=kpa_forms
