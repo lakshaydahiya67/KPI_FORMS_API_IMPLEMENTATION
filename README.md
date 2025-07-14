@@ -55,13 +55,13 @@ POSTGRES_DB=kpa_forms
 python run.py
 ```
 
-The API will be available at: `http://localhost:8000`
+The API will be available at: `http://localhost:8002`
 
 ## 📚 API Documentation
 
 ### Interactive Documentation
-- **Swagger UI**: http://localhost:8000/docs
-- **ReDoc**: http://localhost:8000/redoc
+- **Swagger UI**: http://localhost:8002/docs
+- **ReDoc**: http://localhost:8002/redoc
 
 ### Implemented Endpoints
 
@@ -148,7 +148,7 @@ Create a new bogie checksheet form.
 ## 🧪 Testing with Postman
 
 1. Import the collection: `KPA_Forms_API.postman_collection.json`
-2. Set the environment variable: `base_url = http://localhost:8000`
+2. Set the environment variable: `base_url = http://localhost:8002`
 3. Test the endpoints:
    - Health check: GET /
    - Get wheel specifications (with/without filters)
