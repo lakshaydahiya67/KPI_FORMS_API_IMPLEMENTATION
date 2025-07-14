@@ -1,0 +1,113 @@
+{
+  "info": {
+    "name": "KPA Forms API",
+    "description": "Railway forms management system - Implemented APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/",
+          "host": ["{{base_url}}"],
+          "path": [""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Wheel Specifications (No Filters)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/forms/wheel-specifications",
+          "host": ["{{base_url}}"],
+          "path": ["api", "forms", "wheel-specifications"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Wheel Specifications (With Filters)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/forms/wheel-specifications?formNumber=WHEEL-2025-001&submittedBy=user_id_123&submittedDate=2025-07-03",
+          "host": ["{{base_url}}"],
+          "path": ["api", "forms", "wheel-specifications"],
+          "query": [
+            {
+              "key": "formNumber",
+              "value": "WHEEL-2025-001"
+            },
+            {
+              "key": "submittedBy",
+              "value": "user_id_123"
+            },
+            {
+              "key": "submittedDate",
+              "value": "2025-07-03"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Wheel Specification",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"formNumber\": \"WHEEL-2025-001\",\n  \"submittedBy\": \"user_id_123\",\n  \"submittedDate\": \"2025-07-03\",\n  \"fields\": {\n    \"axleBoxHousingBoreDia\": \"280 (+0.030/+0.052)\",\n    \"bearingSeatDiameter\": \"130.043 TO 130.068\",\n    \"condemningDia\": \"825 (800-900)\",\n    \"intermediateWWP\": \"20 TO 28\",\n    \"lastShopIssueSize\": \"837 (800-900)\",\n    \"rollerBearingBoreDia\": \"130 (+0.0/-0.025)\",\n    \"rollerBearingOuterDia\": \"280 (+0.0/-0.035)\",\n    \"rollerBearingWidth\": \"93 (+0/-0.250)\",\n    \"treadDiameterNew\": \"915 (900-1000)\",\n    \"variationSameAxle\": \"0.5\",\n    \"variationSameBogie\": \"5\",\n    \"variationSameCoach\": \"13\",\n    \"wheelDiscWidth\": \"127 (+4/-0)\",\n    \"wheelGauge\": \"1600 (+2,-1)\",\n    \"wheelProfile\": \"29.4 Flange Thickness\"\n  }\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/forms/wheel-specifications",
+          "host": ["{{base_url}}"],
+          "path": ["api", "forms", "wheel-specifications"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Bogie Checksheet",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"formNumber\": \"BOGIE-2025-001\",\n  \"inspectionBy\": \"user_id_456\",\n  \"inspectionDate\": \"2025-07-03\",\n  \"bogieDetails\": {\n    \"bogieNo\": \"BG1234\",\n    \"dateOfIOH\": \"2025-07-01\",\n    \"deficitComponents\": \"None\",\n    \"incomingDivAndDate\": \"NR / 2025-06-25\",\n    \"makerYearBuilt\": \"RDSO/2018\"\n  },\n  \"bogieChecksheet\": {\n    \"axleGuide\": \"Worn\",\n    \"bogieFrameCondition\": \"Good\",\n    \"bolster\": \"Good\",\n    \"bolsterSuspensionBracket\": \"Cracked\",\n    \"lowerSpringSeat\": \"Good\"\n  },\n  \"bmbcChecksheet\": {\n    \"adjustingTube\": \"DAMAGED\",\n    \"cylinderBody\": \"WORN OUT\",\n    \"pistonTrunnion\": \"GOOD\",\n    \"plungerSpring\": \"GOOD\"\n  }\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/forms/bogie-checksheet",
+          "host": ["{{base_url}}"],
+          "path": ["api", "forms", "bogie-checksheet"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8002",
+      "type": "string"
+    }
+  ]
+}
