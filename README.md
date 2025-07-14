@@ -28,7 +28,7 @@ This project implements 2 APIs from the KPA_form_data Postman collection:
 ### 1. Clone & Navigate
 ```bash
 git clone https://github.com/lakshaydahiya67/KPI_FORMS_API_IMPLEMENTATION.git
-cd july_14
+cd KPI_FORMS_API_IMPLEMENTATION
 ```
 
 ### 2. Install Dependencies
@@ -274,7 +274,7 @@ Ready for Alembic integration for database versioning.
 
 ## 📧 Contact
 
-For any questions or clarifications, please contact: [Your Email]
+For any questions or clarifications, please contact: lakshaydahiya67@gmail.com
 
 ---
 
